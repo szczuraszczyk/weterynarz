@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weterynarz.MainPage"
+             BackgroundColor="LightGreen">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Wizyta u weterynarza"
+                FontSize="Large"
+                BackgroundColor="SeaGreen"
+                Padding="10"/>
+
+            <Entry
+                Placeholder="Imię i nazwisko właściciela..."/>
+
+            <Label
+                Text="Gatunek"/>
+
+            <CollectionView>
+                
+            </CollectionView>
+
+            <HorizontalStackLayout Spacing="20" Padding="1">
+            <Label
+                Text="Ile ma lat?"/>
+            <Label
+                x:Name="ile_lat"
+                Text="0"/>
+            </HorizontalStackLayout>
+
+            <Slider
+                x:Name="slider_wiek"
+                Value="0"
+                Minimum="0"
+                Maximum="20"/>
+
+            <Entry
+                x:Name="cel_wizyty"
+                Placeholder="Cel wizyty"/>
+
+            <TimePicker
+                 Time="16:00"/>
+
+            <Button
+                Text="OK"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
