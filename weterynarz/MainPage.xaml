@@ -22,7 +22,19 @@
                 Text="Gatunek"/>
 
             <CollectionView>
-                
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pies</x:String>
+                        <x:String>Kot</x:String>
+                        <x:String>Świnka morska</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label
+                            Text="{Binding .}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
             </CollectionView>
 
             <HorizontalStackLayout Spacing="20" Padding="1">
@@ -37,7 +49,8 @@
                 x:Name="slider_wiek"
                 Value="0"
                 Minimum="0"
-                Maximum="20"/>
+                Maximum="20"
+                ValueChanged="OnSlideW"/>
 
             <Entry
                 x:Name="cel_wizyty"
